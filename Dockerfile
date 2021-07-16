@@ -12,4 +12,4 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN yarn install --production=true
 COPY --from=development /usr/src/app/dist ./dist
-CMD ["node", "dist/main"]
+CMD ["yarn", "start:prod"]
